@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   
-  layout "Blog_Layout"
+  
   
   def list
     @posts = Post.all
