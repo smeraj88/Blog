@@ -1,0 +1,11 @@
+<h1>Edit Post</h1>
+
+<%=form_for @post, url:{:action=>'update',:id=> @post} do |p|%>
+<p><label>Name:</label></p>
+<p><%= p.text_field  'title'%></p>
+<p><label>Content:</label></p>
+<p><%= p.text_area  'content'%></p>
+<%= p.submit "Save Changes"%>
+<% end %>
+<p><%=link_to "back",{:action=>"list"}%></p>
+

@@ -1,0 +1,9 @@
+<h1>New Post</h1>
+<%=form_tag :action=>'create' do%>
+<p><label>Name:</label></p>
+<p><%= text_field 'posts','title'%></p>
+<p><label>Content:</label></p>
+<p><%= text_area 'posts','content'%></p>
+<%= submit_tag "Post"%>
+<% end %>
+<p><%=link_to "back",{:action=>"list"}%></p>

@@ -1,0 +1,14 @@
+<h1>All Posts </h1>
+
+
+    <%@posts.each do |p|%>
+    <li>Name:<%= p.title%></li>
+    <li>Post:<%= p.content%></li>
+    <%= p.created_at.strftime("%b %d, %Y")%>
+    <%= link_to "edit",{:action => 'edit',:id => p.id}%>
+    <%= link_to "delete",{:action =>'delete',:id => p.id}%>    
+    <hr>
+    <%end%>
+
+
+<p><%= link_to "new post", {:action => 'new' }%></p>
